@@ -5,14 +5,13 @@ const {task, src, dest, parallel, watch} = require('gulp')
 const webpack = require('webpack-stream')
 const browserSync = require('browser-sync')
 
-let dist = './dist/'
-// let dist = '/opt/lampp/htdocs/test';
+let dist = './dist/';
 
-// (async () => {
-//   const distExists = await exists(dist)
-//   if (distExists) return
-//   dist = mkdir('./dist/')
-// })
+(async () => {
+  const distExists = await exists(dist)
+  if (distExists) return
+  dist = mkdir('./dist/')
+})
 
 task('copy-html', () => {
   return src('./src/index.html').
