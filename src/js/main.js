@@ -1,6 +1,7 @@
 import './slider'
 import modals from './modules/modals'
 import tabs from './modules/tabs'
+import forms from './forms'
 
 window.addEventListener('DOMContentLoaded', function() {
    modals()
@@ -16,4 +17,5 @@ window.addEventListener('DOMContentLoaded', function() {
        '.decoration_content > div > div',
        'after_click'
    )
+   forms()
 })
