@@ -1,16 +1,16 @@
 function modals() {
   function bindModal(triggerSelector, modalSelector, closeSelector, closeFromOverlay = true) {
-    const triggers = document.querySelectorAll(triggerSelector),
-        modal = document.querySelector(modalSelector),
-        close = document.querySelector(closeSelector),
-        allModals = document.querySelectorAll('[data-modal]')
+    const triggers = document.querySelectorAll(triggerSelector)
+    const modal = document.querySelector(modalSelector)
+    const close = document.querySelector(closeSelector)
+    const allModals = document.querySelectorAll('[data-modal]')
     triggers.forEach(node => {
       node.addEventListener('click', function(event) {
         if (event.target) event.preventDefault()
-          allModals.forEach(modalItem => {
-            modalItem.style.display = 'none'
-          })
-          modal.style.display = 'block'
+        allModals.forEach(modalItem => {
+          modalItem.style.display = 'none'
+        })
+        modal.style.display = 'block'
         document.body.style.overflow = 'hidden'
         // document.body.classList.add('modal-open')
       })
@@ -63,13 +63,13 @@ function modals() {
       '.popup_calc_profile_close',
       false
   )
-
   bindModal(
       '.popup_calc_profile_button',
       '.popup_calc_end',
       '.popup_calc_end_close',
       false
   )
+
   showModalByTime('.popup', 5000)
 }
 
