@@ -6,8 +6,10 @@ import changeModalState from './modules/changeModalState'
 
 window.addEventListener('DOMContentLoaded', function() {
    "use strict"
-   const modalState = {}
+   let modalState = {}
+
    changeModalState(modalState)
+
    modals()
    tabs(
        '.glazing_slider',
@@ -28,5 +30,5 @@ window.addEventListener('DOMContentLoaded', function() {
        'do_image_more',
        'inline-block'
    )
-   forms()
+   forms(modalState)
 })
