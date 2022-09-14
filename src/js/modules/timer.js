@@ -37,6 +37,7 @@ function timer(id, deadline) {
         clearInterval(timeInterval)
       }
     }
+
     updateClock()
   }
   setClock(id, deadline)
